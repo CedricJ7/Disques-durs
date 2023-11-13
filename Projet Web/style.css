@@ -1,0 +1,142 @@
+
+body {
+    /* background-image: url('https://www.hdwallpapers.in/download/simple_blue_background_grunge_hd_grunge-1920x1080.jpg') */
+    /* background-image: url('https://t4.ftcdn.net/jpg/04/97/07/85/360_F_497078520_8uEI72gYipYk6iT5RZHVLajBWdQiroID.jpg'); */
+    /* background-image: url('https://img.freepik.com/photos-gratuite/image-fond-ecran-abstrait-bleu-acier_53876-104016.jpg'); */
+    background-image: url('https://cdn.cbeditz.com/cbeditz/large/11610970554aosfw8uujm00apgwt2rdlxtmpmyesmxpt6osuqkvjiwrj5dskvjdozvicxocop3cpettbt96nletujw8jiwwz85qfe2gcsgbxiw2.jpg');
+    font-family: Arial, sans-serif;
+     /* background-color: blue;    */
+     background-size: original;
+    margin: 0;
+    padding: 0;
+}
+
+#clock {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background-color: normal;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 7%;
+}
+
+#time {
+    color: gold;
+    position: fixed;
+    top: 150px; /* Ajustez cette valeur pour placer le texte en dessous de l'horloge */
+    right: 10px;
+    font-size: 18px; /* Ajustez la taille de la police selon vos préférences */
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 40px; 
+    color: gold; 
+}
+h2 {
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 40px; 
+    color: #ffffff; 
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 40px auto; 
+    background-color: #gold; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    color:white;
+}
+
+table, th, td {
+    border: 1px gold solid; 
+}
+
+th, td {
+    padding: 12px; 
+    text-align: center;
+}
+
+#actions-section {
+    text-align: center;
+    margin-top: 40px; 
+}
+.bar-container {
+    width: 300px;
+    height: 20px;
+    background-color: #ccc;
+    position: relative;
+    left: 818px;
+  }
+  
+  .bar-fill {
+    height: 100%;
+    background-color: #4CAF50; /* Couleur de remplissage */
+    width: 0; /* Largeur de remplissage (50% dans cet exemple) */
+    position: absolute;
+  }
+  
+
+button {
+    padding: 12px; 
+    font-size: 18px;
+    margin: 10px; 
+    background-color: goldenrod; 
+    color: white;
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3f51b5; 
+    box-shadow: #000 5px 5px 5px; 
+
+}
+
+#button_alert {
+    background-color: #1a237e; 
+    color: white;
+    border: none; 
+    cursor: pointer;
+    border-radius: 8px; 
+    box-shadow: 2px 2px 2px #000; 
+}
+
+#button_alert:hover {
+    background-color: #3f51b5; 
+}
+
+#response {
+    border: 2px solid goldenrod; 
+    padding: 10px; 
+    text-align: center; 
+    background-color: normal; 
+    color:white;
+}
+
+#get-disk-info-btn {
+    text-align: center;
+}
+#button_disque {
+    text-align: center;
+    
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: normal;
+    color: #ffffff; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+

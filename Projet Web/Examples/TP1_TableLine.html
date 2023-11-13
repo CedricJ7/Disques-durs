@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8"/>
+		<title>X</title>
+		<!-- Dependancies required to define custom Elements -->
+		<!--<script type="text/javascript" src="/Brython-3.11.3/brython.js"></script>
+		<script type="text/javascript" src="/Brython-3.11.3/brython_stdlib.js"></script>-->
+		<script src="https://raw.githack.com/brython-dev/brython/master/www/src/brython.js"
+			crossorigin="anonymous">
+		</script>
+		<script src="https://raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js"
+			crossorigin="anonymous">
+		</script>
+		<script type="text/python" src="/components/components.py" id="components"></script>
+		<!-- -->
+		<script type="text/python">
+			from components import defineCustomElements
+			from browser import html
+
+			#// define your custom elements here :
+			defineCustomElements(tagname='my-badline' , path='/components/Examples/TP1_TableLine/' )
+			defineCustomElements(tagname='my-line' , path='/components/Examples/TP1_TableLine/', tagtype=html.TR)
+		</script>
+	</head>
+	<body>
+		<h1>Mon super site Web</h1>
+
+		<table>
+			<thead>
+				<tr><th>Nom</th><th>Valeur</th></tr>
+			</thead>
+			<tbody>
+				<!-- Browser is moving it outside the table. -->
+				<my-badline  data-name='bad' data-value='nok'></my-badline>
+				<!-- Works on Firefox, doesn't work on Chromium-based browsers. -->
+				<tr is="my-line" data-name='X' data-value='ok'></tr>
+			</tbody>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,173 @@
+	<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Gestion des disques</title>
+		<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.12.0/brython.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.12.0/brython_stdlib.js">
+	
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+    
+	</head>
+	<body><!--  onload="brython()"> -->
+		<!-- <script>
+			function updateClock() {
+				const clockElement = document.getElementById("clock");
+				const now = new Date();
+				const hours = now.getHours().toString().padStart(2, "0");
+				const minutes = now.getMinutes().toString().padStart(2, "0");
+				const seconds = now.getSeconds().toString().padStart(2, "0");
+				clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+			}
+	
+			// Met à jour l'horloge chaque seconde
+			setInterval(updateClock, 1000);
+	
+			// Appel initial pour afficher l'heure actuelle
+			updateClock();
+		</script> -->
+		<!-- <b id="moving" style="top: 203px; left: 577px; cursor: move;">
+			<canvas width="250" height="250" id="clock">
+				Your browser doesn't support Canvas
+				</canvas>
+		</b> -->
+		<h1>Gestion des disques</h1>
+		<canvas width="250" height="250" id="clock">
+			Your browser doesn't support Canvas
+			</canvas>
+		<div id="time"></div>
+		<!-- <script type="text/python">
+			from browser import document, html, bind
+			import time
+			def actual_time(event):
+				return document["clock"].text(time.strftime("%H:%M:%S"))
+			document["clock"].bind("click", actual_time)
+		</script> -->
+		<div id="disk-table">
+			<table>
+				<thead>
+					<tr>
+						<th>Nom</th>
+						<th>Espace Libre</th>
+						<th>Espace Occupé</th>
+						<th>Espace total</th>
+						
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td id="nom1">Disque fake 1</td>
+						<td id="espace_l1">300 Go</td>
+						<td id="espace_u1">100 Go</td>
+						<td id="espace_t1">400 Go</td>
+					</tr>
+					<tr>
+		
+						<td id="nom2">Disque fake 2</td>
+						<td id="espace_l2">300 Go</td>
+						<td id="espace_u2">100 Go</td>
+						<td id="espace_t2">400 Go</td>
+						
+						
+					</tr>
+					<tr>
+						<td id="nom3">Disque fake 3</td>
+						<td id="espace_l3">300 Go</td>
+						<td id="espace_u3">100 Go</td>
+						<td id="espace_t3">400 Go</td>
+					</tr>
+					<tr>
+						<td id="nom4">Disque fake 4</td>
+						<td id="espace_l4">300 Go</td>
+						<td id="espace_u4">100 Go</td>
+						<td id="espace_t4">400 Go</td>
+					</tr>
+					<tr>
+						<td id="nom5">Disque fake 5</td>
+						<td id="espace_l5">300 Go</td>
+						<td id="espace_u5">100 Go</td>
+						<td id="espace_t5">400 Go</td>
+					</tr>
+					<tr>
+						<td id="nom6">Disque fake 6</td>
+						<td id="espace_l6">300 Go</td>
+						<td id="espace_u6">100 Go</td>
+						<td id="espace_t6">400 Go</td>
+					</tr>
+					<tr>
+						<td id="nom7">Disque fake 7</td>
+						<td id="espace_l7">300 Go</td>
+						<td id="espace_u7">100 Go</td>
+						<td id="espace_t7">400 Go</td>
+					</tr>
+					<!-- #ajouter une colonne pourcentage traduit en jauge colorée  -->
+				</tbody>
+			</table>
+			<div class="bar-container">
+				<div class="bar-fill" id="bar-fill"></div>
+			  </div>
+			  
+			  
+			<div id="button_disque"><button id="get-disk-info-btn">Jauge disque principal</button></div>
+			
+		</div>
+		
+		<div id="actions-section">
+			<h2>Gérer les Partitions et les Volumes</h2>
+			<button id="create-partition-btn">Créer une Partition</button>
+			<button id="delete-partition-btn">Supprimer une Partition</button>
+			<button id="encrypt-volume-btn">Chiffrer un Volume</button>
+			<button id="unlock-volume-btn">Déverrouiller un Volume</button>
+			<button id="terminal">créer partition 2</button>
+		
+		</div>
+	<!-- <script type="text/python">
+		from browser import bind, document
+
+		@bind("#get-disk-info-btn", "click")
+		def change(event):
+			display = document["disk-table"].style.display
+			document["disk-table"].style.display = "inline" if display == "none" else "none"
+		</script>
+		 -->
+	
+	
+	</body>
+	<script type="text/python" src="clock.py"></script>
+	<!-- <script type="text/python" src="hello.py"></script> -->
+		<!-- <button id="button_alert">Click me !</button>
+
+  <script type="text/python" src="click.py"></script> -->
+
+  <!-- <button id="1">TEST</button>
+  <button id="33">TEST2</button>
+  <button id="get_disk_info_via_ajax">TEST3</button> -->
+<!-- <script type="text/python" src="mouve_canva.py"></script>  -->
+
+  <div id="response"></div>
+  <!-- <script type="text/python" src="ajax.py"></script> -->
+  <script type="text/python" src="ajax_disque.py"></script>
+  <script type="text/python" src="ajax_partition.py"></script>
+  <script type="text/python" src="chiffrer.py"></script>
+  <script type="text/python" src="terminal.py"></script>
+  <script type="text/python" src="jauge.py"></script>
+  <footer>
+    <p>Cédric Jestin #lecryptologue - Premier site web (02/11/2023) en HTML/CSS avec Brython pour la forme, et Flask (Python) en simple serveur local pour le fond.
+		<div id="brython">
+	<script type="text/python">
+	from browser import document, html
+	foot = html.P()+html.I("Ecrit en " + html.A("Brython",href="http://www.brython.info"))
+
+	document <= foot
+	</script></div>
+	</p>
+</footer>
+
+
+</html>
+

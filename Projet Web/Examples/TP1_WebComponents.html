@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8"/>
+		<title>X</title>
+		<!-- Dependancies required to define custom Elements -->
+		<!--<script type="text/javascript" src="/Brython-3.11.3/brython.js"></script>
+		<script type="text/javascript" src="/Brython-3.11.3/brython_stdlib.js"></script>-->
+		<script src="https://raw.githack.com/brython-dev/brython/master/www/src/brython.js"
+			crossorigin="anonymous">
+		</script>
+		<script src="https://raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js"
+			crossorigin="anonymous">
+		</script>
+		<script type="text/python" src="/components/components.py" id="components"></script>
+		<!-- -->
+		<script type="text/python">
+			from components import defineCustomElements
+			from browser import html
+
+			#// define your custom elements here :
+			defineCustomElements(tagname='hello-user' , path='/components/Examples/TP1_WebComponents/' )
+			defineCustomElements(tagname='my-hello' , path='/components/Examples/TP1_Variables/' )
+		</script>
+	</head>
+	<body>
+		<h1>Mon super site Web</h1>
+
+		<hello-user>hello</hello-user>
+		<my-hello> <!--include -->
+			<iframe src="/index.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</my-hello>
+	</body>
+</html>
